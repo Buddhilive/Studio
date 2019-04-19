@@ -14,6 +14,7 @@
         <script src="js/nexus.js"></script>
         <script src="js/jquery.js"></script>
 		<script src="js/melodybook.js"></script>
+		<script src="js/tone.js"></script>
 
         <style>
             #mainSidebar {
@@ -57,7 +58,7 @@
                             <div class="mdl-grid">
                                 <div class="mdl-cell mdl-cell--12-col">
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="btnSettings">
-                                        Generate
+                                        Save Settings
                                     </button>
                                 </div>
                             </div>
@@ -78,24 +79,29 @@
             <main class="mdl-layout__content mdl-color--blue-grey-900">
                 <div class="page-content">
                     <div class="mdl-grid" id="mainGrid"  align="center">
-                        <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-cell mdl-cell--9-col">
                             <div id="grandMatrix"></div>
   
   <div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col"  align="center">
+  <div class="mdl-cell mdl-cell--3-col"  align="center">
   <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-color--green-500" id="btnGenerate"><i class="material-icons">brush</i></button>
   </div>
-  <div class="mdl-cell mdl-cell--4-col"  align="center">
+  <div class="mdl-cell mdl-cell--3-col"  align="center">
  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="btnPlay"><i class="material-icons">play_arrow</i></button>
  </div>
-  <div class="mdl-cell mdl-cell--4-col"  align="center">
+  <div class="mdl-cell mdl-cell--3-col"  align="center">
  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="btnStop" disabled><i class="material-icons">pause</i></button>
+  </div>
+  <div class="mdl-cell mdl-cell--3-col"  align="center">
+ <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-color--yellow-500" id="btnSave" disabled>
+ <i class="material-icons">save</i>
+ </button>
   </div>
   </div>
 
                         </div>
 
-                        <div id="mainSidebar" class="mdl-cell mdl-cell--6-col">
+                        <div id="mainSidebar" class="mdl-cell mdl-cell--3-col">
 						<div class="mdl-cell mdl-cell--12-col"  align="center">
 	<!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- tonebreaker -->
@@ -109,7 +115,7 @@
 	</div>
 	
 	<div class="mdl-cell mdl-cell--12-col"  align="center">
-	<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+	<div class="demo-card-square mdl-card mdl-shadow--2dp">
   <div class="mdl-card__title">
     <h2 class="mdl-card__title-text">Welcome</h2>
   </div>
@@ -139,6 +145,6 @@
                 </div>
             </main>
         </div>
-        <script src="app/index.js"></script>
+        <script src="js/index.js"></script>
     </body>
 </html>
