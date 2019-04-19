@@ -70,7 +70,7 @@ var Melody4 = {
             {pitch: 64, quantizedStartStep: 20, quantizedEndStep: 24},
  
   ],
-  quantizationInfo: {stepsPerQuarter: 4},
+  quantizationInfo: {stepsPerQuarter: 1},
   tempos: [{time: 0, qpm: 120}],
   totalQuantizedSteps: 24
 };
@@ -95,7 +95,7 @@ var Melody5 = {
             {pitch: 69, quantizedStartStep: 30, quantizedEndStep: 32}
  
   ],
-  quantizationInfo: {stepsPerQuarter: 4},
+  quantizationInfo: {stepsPerQuarter: 1},
   tempos: [{time: 0, qpm: 120}],
   totalQuantizedSteps: 32
 };
@@ -127,5 +127,3 @@ var Drumkit1 = {
   tempos: [{time: 0, qpm: 120}],
   totalQuantizedSteps: 11
 };
-
-var Drumkit2 = {"tempos":[{"qpm":120}],"notes":[{"pitch":36,"isDrum":true,"quantizedStartStep":"1","quantizedEndStep":"2"},{"pitch":38,"isDrum":true,"quantizedStartStep":"1","quantizedEndStep":"2"},{"pitch":42,"isDrum":true,"quantizedStartStep":"1","quantizedEndStep":"2"},{"pitch":50,"isDrum":true,"quantizedStartStep":"1","quantizedEndStep":"2"},{"pitch":42,"isDrum":true,"quantizedStartStep":"3","quantizedEndStep":"4"},{"pitch":50,"isDrum":true,"quantizedStartStep":"3","quantizedEndStep":"4"},{"pitch":36,"isDrum":true,"quantizedStartStep":"5","quantizedEndStep":"6"},{"pitch":38,"isDrum":true,"quantizedStartStep":"5","quantizedEndStep":"6"},{"pitch":42,"isDrum":true,"quantizedStartStep":"5","quantizedEndStep":"6"},{"pitch":42,"isDrum":true,"quantizedStartStep":"7","quantizedEndStep":"8"},{"pitch":50,"isDrum":true,"quantizedStartStep":"7","quantizedEndStep":"8"},{"pitch":36,"isDrum":true,"quantizedStartStep":"9","quantizedEndStep":"10"},{"pitch":38,"isDrum":true,"quantizedStartStep":"9","quantizedEndStep":"10"},{"pitch":42,"isDrum":true,"quantizedStartStep":"9","quantizedEndStep":"10"},{"pitch":50,"isDrum":true,"quantizedStartStep":"9","quantizedEndStep":"10"},{"pitch":42,"isDrum":true,"quantizedStartStep":"11","quantizedEndStep":"12"},{"pitch":50,"isDrum":true,"quantizedStartStep":"11","quantizedEndStep":"12"},{"pitch":36,"isDrum":true,"quantizedStartStep":"13","quantizedEndStep":"14"},{"pitch":38,"isDrum":true,"quantizedStartStep":"13","quantizedEndStep":"14"},{"pitch":42,"isDrum":true,"quantizedStartStep":"13","quantizedEndStep":"14"},{"pitch":42,"isDrum":true,"quantizedStartStep":"15","quantizedEndStep":"16"},{"pitch":50,"isDrum":true,"quantizedStartStep":"15","quantizedEndStep":"16"},{"pitch":36,"isDrum":true,"quantizedStartStep":"17","quantizedEndStep":"18"},{"pitch":38,"isDrum":true,"quantizedStartStep":"17","quantizedEndStep":"18"},{"pitch":42,"isDrum":true,"quantizedStartStep":"17","quantizedEndStep":"18"},{"pitch":50,"isDrum":true,"quantizedStartStep":"17","quantizedEndStep":"18"},{"pitch":42,"isDrum":true,"quantizedStartStep":"19","quantizedEndStep":"20"},{"pitch":50,"isDrum":true,"quantizedStartStep":"19","quantizedEndStep":"20"},{"pitch":36,"isDrum":true,"quantizedStartStep":"21","quantizedEndStep":"22"},{"pitch":38,"isDrum":true,"quantizedStartStep":"21","quantizedEndStep":"22"},{"pitch":42,"isDrum":true,"quantizedStartStep":"21","quantizedEndStep":"22"},{"pitch":42,"isDrum":true,"quantizedStartStep":"23","quantizedEndStep":"24"},{"pitch":50,"isDrum":true,"quantizedStartStep":"23","quantizedEndStep":"24"},{"pitch":36,"isDrum":true,"quantizedStartStep":"25","quantizedEndStep":"26"},{"pitch":38,"isDrum":true,"quantizedStartStep":"25","quantizedEndStep":"26"},{"pitch":42,"isDrum":true,"quantizedStartStep":"25","quantizedEndStep":"26"},{"pitch":50,"isDrum":true,"quantizedStartStep":"25","quantizedEndStep":"26"},{"pitch":42,"isDrum":true,"quantizedStartStep":"27","quantizedEndStep":"28"},{"pitch":50,"isDrum":true,"quantizedStartStep":"27","quantizedEndStep":"28"},{"pitch":36,"isDrum":true,"quantizedStartStep":"29","quantizedEndStep":"30"},{"pitch":38,"isDrum":true,"quantizedStartStep":"29","quantizedEndStep":"30"},{"pitch":42,"isDrum":true,"quantizedStartStep":"29","quantizedEndStep":"30"},{"pitch":42,"isDrum":true,"quantizedStartStep":"31","quantizedEndStep":"32"},{"pitch":50,"isDrum":true,"quantizedStartStep":"31","quantizedEndStep":"32"}],"quantizationInfo":{"stepsPerQuarter":4},"totalQuantizedSteps":"32"}

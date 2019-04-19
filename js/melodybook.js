@@ -1,59 +1,65 @@
 var Melody1 = {
   notes: [
-    {pitch: 60, startTime: 0.0, endTime: 0.5},
-    {pitch: 60, startTime: 0.5, endTime: 1.0},
-    {pitch: 67, startTime: 1.0, endTime: 1.5},
-    {pitch: 67, startTime: 1.5, endTime: 2.0},
-    {pitch: 69, startTime: 2.0, endTime: 2.5},
-    {pitch: 69, startTime: 2.5, endTime: 3.0},
-    {pitch: 67, startTime: 3.0, endTime: 4.0},
-    {pitch: 65, startTime: 4.0, endTime: 4.5},
-    {pitch: 65, startTime: 4.5, endTime: 5.0},
-    {pitch: 64, startTime: 5.0, endTime: 5.5},
-    {pitch: 64, startTime: 5.5, endTime: 6.0},
-    {pitch: 62, startTime: 6.0, endTime: 6.5},
-    {pitch: 62, startTime: 6.5, endTime: 7.0},
-    {pitch: 60, startTime: 7.0, endTime: 8.0},  
-  ],
-  totalTime: 8
+            {pitch: 60, quantizedStartStep: 0, quantizedEndStep: 2},
+            {pitch: 60, quantizedStartStep: 2, quantizedEndStep: 4},
+            {pitch: 67, quantizedStartStep: 4, quantizedEndStep: 6},
+            {pitch: 67, quantizedStartStep: 6, quantizedEndStep: 8},
+            {pitch: 69, quantizedStartStep: 8, quantizedEndStep: 10},
+            {pitch: 69, quantizedStartStep: 10, quantizedEndStep: 12},
+            {pitch: 67, quantizedStartStep: 12, quantizedEndStep: 16},
+            {pitch: 65, quantizedStartStep: 16, quantizedEndStep: 18},
+            {pitch: 65, quantizedStartStep: 18, quantizedEndStep: 20},
+            {pitch: 64, quantizedStartStep: 20, quantizedEndStep: 22},
+            {pitch: 64, quantizedStartStep: 22, quantizedEndStep: 24},
+            {pitch: 62, quantizedStartStep: 24, quantizedEndStep: 26},
+            {pitch: 62, quantizedStartStep: 26, quantizedEndStep: 28},
+            {pitch: 60, quantizedStartStep: 28, quantizedEndStep: 32}
+        ],
+		quantizationInfo: {stepsPerQuarter: 1},
+  tempos: [{time: 0, qpm: 120}],
+  totalQuantizedSteps: 32
 };
 
 var Melody2 = {
-  notes: [
-    {pitch: 60, startTime: 0.0, endTime: 0.5},
-    {pitch: 60, startTime: 0.5, endTime: 1.0},
-    {pitch: 64, startTime: 1.0, endTime: 1.5},
-    {pitch: 64, startTime: 1.5, endTime: 2.0},
-    {pitch: 62, startTime: 2.0, endTime: 2.5},
-    {pitch: 62, startTime: 2.5, endTime: 3.0},
-    {pitch: 64, startTime: 3.0, endTime: 4.0},
-    {pitch: 60, startTime: 4.0, endTime: 4.5},
-    {pitch: 60, startTime: 4.5, endTime: 5.0},
-    {pitch: 62, startTime: 5.0, endTime: 5.5},
-    {pitch: 62, startTime: 5.5, endTime: 6.0},
-    {pitch: 64, startTime: 6.0, endTime: 8.0}, 
-  ],
-  totalTime: 8
+  notes:[
+            {pitch: 64, quantizedStartStep: 0, quantizedEndStep: 2},
+            {pitch: 60, quantizedStartStep: 2, quantizedEndStep: 4},
+            {pitch: 64, quantizedStartStep: 4, quantizedEndStep: 6},
+            {pitch: 60, quantizedStartStep: 6, quantizedEndStep: 8},
+            {pitch: 65, quantizedStartStep: 8, quantizedEndStep: 10},
+            {pitch: 60, quantizedStartStep: 10, quantizedEndStep: 12},
+            {pitch: 65, quantizedStartStep: 12, quantizedEndStep: 14},
+            {pitch: 60, quantizedStartStep: 14, quantizedEndStep: 16},
+            {pitch: 67, quantizedStartStep: 16, quantizedEndStep: 18},
+            {pitch: 60, quantizedStartStep: 18, quantizedEndStep: 20},
+            {pitch: 67, quantizedStartStep: 20, quantizedEndStep: 22},
+            {pitch: 60, quantizedStartStep: 22, quantizedEndStep: 24},
+            {pitch: 62, quantizedStartStep: 24, quantizedEndStep: 26},
+            {pitch: 59, quantizedStartStep: 26, quantizedEndStep: 28},
+            {pitch: 62, quantizedStartStep: 28, quantizedEndStep: 30},
+            {pitch: 59, quantizedStartStep: 30, quantizedEndStep: 32}
+        ],
+  quantizationInfo: {stepsPerQuarter: 1},
+  tempos: [{time: 0, qpm: 120}],
+  totalQuantizedSteps: 32
 };
 
 var Melody3 = {
   notes: [
-    {pitch: 64, startTime: 0.0, endTime: 0.5},
-    {pitch: 64, startTime: 0.5, endTime: 1.0},
-    {pitch: 64, startTime: 1.0, endTime: 1.5},
-    {pitch: 62, startTime: 1.5, endTime: 2.0},
-    {pitch: 60, startTime: 2.0, endTime: 2.5},
-    {pitch: 60, startTime: 2.5, endTime: 3.5},
-    {pitch: 62, startTime: 3.5, endTime: 4.0},
-    {pitch: 69, startTime: 4.0, endTime: 5.0},
-    {pitch: 69, startTime: 5.0, endTime: 5.5},
-    {pitch: 69, startTime: 5.5, endTime: 6.0},
-    {pitch: 65, startTime: 6.0, endTime: 7.0},
-    {pitch: 65, startTime: 7.0, endTime: 8.0},
-    {pitch: 67, startTime: 8.0, endTime: 10.0},
- 
-  ],
-  totalTime: 10
+            {pitch: 57, quantizedStartStep: 0, quantizedEndStep: 4},
+            {pitch: 62, quantizedStartStep: 4, quantizedEndStep: 6},
+            {pitch: 64, quantizedStartStep: 6, quantizedEndStep: 8},
+            {pitch: 65, quantizedStartStep: 8, quantizedEndStep: 10},
+            {pitch: 62, quantizedStartStep: 10, quantizedEndStep: 12},
+            {pitch: 64, quantizedStartStep: 12, quantizedEndStep: 16},
+            {pitch: 60, quantizedStartStep: 16, quantizedEndStep: 20},
+            {pitch: 62, quantizedStartStep: 20, quantizedEndStep: 26},
+            {pitch: 57, quantizedStartStep: 26, quantizedEndStep: 28},
+            {pitch: 57, quantizedStartStep: 28, quantizedEndStep: 32}
+        ],
+  quantizationInfo: {stepsPerQuarter: 1},
+  tempos: [{time: 0, qpm: 120}],
+  totalQuantizedSteps: 32
 };
 
 var Melody4 = {
@@ -70,7 +76,7 @@ var Melody4 = {
             {pitch: 64, quantizedStartStep: 20, quantizedEndStep: 24},
  
   ],
-  quantizationInfo: {stepsPerQuarter: 4},
+  quantizationInfo: {stepsPerQuarter: 1},
   tempos: [{time: 0, qpm: 120}],
   totalQuantizedSteps: 24
 };
@@ -95,7 +101,7 @@ var Melody5 = {
             {pitch: 69, quantizedStartStep: 30, quantizedEndStep: 32}
  
   ],
-  quantizationInfo: {stepsPerQuarter: 4},
+  quantizationInfo: {stepsPerQuarter: 1},
   tempos: [{time: 0, qpm: 120}],
   totalQuantizedSteps: 32
 };

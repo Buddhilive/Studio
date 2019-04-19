@@ -27,6 +27,36 @@
                 padding: 10px;
                 display: table;
             }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.modal {
+    width: 300px;
+    height: 200px;
+    line-height: 200px;
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -150px;
+
+    border-radius: 25px;
+    text-align: center;
+    z-index: 11;
+}
+
+.content {
+    margin: 30px;
+}
+
         </style>
     </head>
     <body>
@@ -39,7 +69,7 @@
                     <div class="mdl-layout-spacer"></div>
                 </div>
             </header>
-            <div class="mdl-layout__drawer">
+            <div class="mdl-layout__drawer" id="theDrawer">
                 <span class="mdl-layout-title">Settings</span>
 				<div class="mdl-grid" align="center">
                             <div class="mdl-grid">
@@ -54,6 +84,21 @@
                                     <div id="numberTemp"></div>
                                 </div>
                             </div>
+							
+							<div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--12-col">
+							
+<select class="mdl-button mdl-color--red-500" id="melodyMenu" onchange="melodyUpdate()">
+  <option value="Melody1">Melody 1</option>
+  <option value="Melody2">Melody 2</option>
+  <option value="Melody3">Melody 3</option>
+  <option value="Melody4">Melody 4</option>
+  <option value="Melody5">Melody 5</option>
+</select>
+</div>
+
+                            </div>
+							
 
                             <div class="mdl-grid">
                                 <div class="mdl-cell mdl-cell--12-col">
@@ -63,16 +108,16 @@
                                 </div>
                             </div>
 							
-							<div class="mdl-grid">
-				<!--<div class="mdl-cell mdl-cell--12-col">
+							<!--<div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--12-col">
 							<div class="mdl-color-text--white">Sample Melody</div><br>
                             <label class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                                 Select
                                 <input id="midiSelector" type="file" onchange="previewFile()">
                             </label>
-							</div>-->
-							
 							</div>
+							
+							</div>-->
 							</div>
 				
             </div>
@@ -83,20 +128,26 @@
                             <div id="grandMatrix"></div>
   
   <div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--3-col"  align="center">
+  <div class="mdl-cell mdl-cell--2-col"  align="center">
   <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-color--green-500" id="btnGenerate"><i class="material-icons">brush</i></button>
   </div>
-  <div class="mdl-cell mdl-cell--3-col"  align="center">
+  <div class="mdl-cell mdl-cell--2-col"  align="center">
  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="btnPlay"><i class="material-icons">play_arrow</i></button>
  </div>
-  <div class="mdl-cell mdl-cell--3-col"  align="center">
+  <div class="mdl-cell mdl-cell--2-col"  align="center">
  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="btnStop" disabled><i class="material-icons">pause</i></button>
   </div>
-  <div class="mdl-cell mdl-cell--3-col"  align="center">
+   <div class="mdl-cell mdl-cell--4-col"  align="right">
+ <select class="mdl-button mdl-color--red-500" id="saveMenu" onchange="saveUpdate()">
+  <option value="drums">Save Drums</option>
+  <option value="melody">Save Melody</option>
+</select>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col"  align="left">
  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-color--yellow-500" id="btnSave" disabled>
  <i class="material-icons">save</i>
  </button>
-  </div>
+ </div>
   </div>
 
                         </div>
@@ -142,6 +193,25 @@
 
                         </div>
                     </div>
+					
+					<div class="overlay"></div>
+  <div class="modal mdl-color--amber-500">
+  <h2>Loading...</h2>
+  <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+  </div>	
+  
+  <div id="theOverlay" class="overlay" hidden></div>
+  <div id="theDialog" class="modal mdl-color--blue-500" hidden>
+  <h5>Music Generation in Progress...</h5>
+  <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate mdl-color--blue-500"></div>
+  </div>	
+
+  
+  <div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+    <div class="mdl-snackbar__text"></div>
+    <button type="button" class="mdl-snackbar__action"></button>
+</div>
+					
                 </div>
             </main>
         </div>
