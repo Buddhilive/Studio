@@ -12,7 +12,7 @@ Promise.all([drum_machine.initialize(),music_machine.initialize()]).then(functio
 
 //Initializing UI Components
 var seqWidth = window.innerWidth - 400;
-var seqHeight = window.innerHeight - 150;
+var seqHeight = window.innerHeight - 180;
 
 var grandSequencer = new Nexus.Sequencer('#grandMatrix', {
     'size': [seqWidth, seqHeight],
@@ -75,6 +75,7 @@ var drum_clap = new Tone.Player("sounds/clap.mp3").toMaster();
 var drum_ride = new Tone.Player("sounds/ride.ogg").toMaster();
 
 var notification_main = new Tone.Player("sounds/slow-spring-board.mp3").toMaster();
+var notification_end = new Tone.Player("sounds/jingle-bells-sms.mp3").toMaster();
 
 var toneynth = new Tone.Synth().toMaster();
 
@@ -104,6 +105,7 @@ function stopSequence() {
 
 async function generateMusic() {
 	btnSave.disabled = true;
+	saveMenu.disabled = true;
 	
 	notification_main.start();
   
@@ -180,7 +182,10 @@ async function generateMusic() {
 	timeout: 2000
   }
   );
+  
+  notification_end.start();
   btnSave.disabled = false;
+  saveMenu.disabled =false;
 		
 		/*const teapot = await mm.urlToNoteSequence("midi/DRUM1.mid");
 		const drums_qns = mm.sequences.quantizeNoteSequence(teapot, 4);

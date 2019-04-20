@@ -3,10 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Buddhi Live Studio</title>
+        <title>Buddhi Live</title>
         <!-- Load @magenta/music -->
         <script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0"></script>
 
+<link rel="icon" type="image/png" href="Buddhi_favicon.png"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="css/material.min.css">
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -34,21 +35,17 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.5);
+    /*background-color: rgba(0,0,0,0.5);*/
+	background-color: #000;
     z-index: 10;
 }
 
-.modal {
-    width: 300px;
-    height: 200px;
-    line-height: 200px;
+#theModal { 
     position: fixed;
     top: 50%; 
     left: 50%;
     margin-top: -100px;
     margin-left: -150px;
-
-    border-radius: 25px;
     text-align: center;
     z-index: 11;
 }
@@ -64,7 +61,7 @@
             <header class="mdl-layout__header mdl-color--black">
                 <div class="mdl-layout__header-row">
                     <!-- Title -->
-                    <span class="mdl-layout-title">Buddhi Live</span>
+                    <span class="mdl-layout-title">Buddhi Live Studio</span>
                     <!-- Add spacer, to align navigation to the right -->
                     <div class="mdl-layout-spacer"></div>
                 </div>
@@ -138,7 +135,7 @@
  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="btnStop" disabled><i class="material-icons">pause</i></button>
   </div>
    <div class="mdl-cell mdl-cell--4-col"  align="right">
- <select class="mdl-button mdl-color--red-500" id="saveMenu" onchange="saveUpdate()">
+ <select class="mdl-button mdl-color--red-500" id="saveMenu" onchange="saveUpdate()" disabled>
   <option value="drums">Save Drums</option>
   <option value="melody">Save Melody</option>
 </select>
@@ -171,15 +168,11 @@
     <h2 class="mdl-card__title-text">Welcome</h2>
   </div>
   <div class="mdl-card__supporting-text">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Mauris sagittis pellentesque lacus eleifend lacinia...
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Mauris sagittis pellentesque lacus eleifend lacinia...
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Mauris sagittis pellentesque lacus eleifend lacinia...
+    Buddhi Live Studio is an Artificial Intelligence powered music generation tool. You can generate Music ideas using this tool and download the generated music as MIDI.
+	Then you can impoert these MIDI files to your favorite DAW to develop a great piece of music.
   </div>
   <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+    <a href="https://ai.buddhilive.com" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" target="_blank">
       Learn More
     </a>
   </div>
@@ -195,10 +188,18 @@
                     </div>
 					
 					<div id="theOverlay" class="overlay"></div>
-  <div id="theModal" class="modal mdl-color--amber-500">
-  <h2 id="messageText">Loading...</h2>
-  <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
-  </div>	
+					<div id="theModal" class="demo-card-square mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Buddhi Live Studio</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    Initializing Components...
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+  </div>
+</div>
+
   
   <div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
     <div class="mdl-snackbar__text"></div>
