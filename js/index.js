@@ -5,8 +5,8 @@ var music_machine = new mm.MusicRNN('https://storage.googleapis.com/magentadata/
 
 Promise.all([drum_machine.initialize(),music_machine.initialize()]).then(function() {
 	setTimeout(function(){ 
-  document.querySelector('.overlay').remove();
-  document.querySelector('.modal').remove();
+  document.getElementById("theOverlay").style.display = "none";
+  document.getElementById("theModal").style.display = "none";
   }, 3000);
 });
 
@@ -74,6 +74,8 @@ var drum_hihat_closed = new Tone.Player("sounds/hihat-closed.mp3").toMaster();
 var drum_clap = new Tone.Player("sounds/clap.mp3").toMaster();
 var drum_ride = new Tone.Player("sounds/ride.ogg").toMaster();
 
+var notification_main = new Tone.Player("sounds/slow-spring-board.mp3").toMaster();
+
 var toneynth = new Tone.Synth().toMaster();
 
 
@@ -102,7 +104,11 @@ function stopSequence() {
 
 async function generateMusic() {
 	btnSave.disabled = true;
+	
+	notification_main.start();
+  
 	if (drum_machine.isInitialized() == true && music_machine.isInitialized() == true) {
+
 		
 		/*let drumSeq = await drum_machine.sample(1, 0.5);
 		mm.Player().start(drumseq);
@@ -233,7 +239,7 @@ document.querySelector('.mdl-layout__obfuscator').classList.remove("is-visible")
 document.querySelector('.mdl-layout__drawer').classList.remove("is-visible");
 document.getElementById("theDrawer").setAttribute('aria-hidden', true);
 
-otification.MaterialSnackbar.showSnackbar(
+notification.MaterialSnackbar.showSnackbar(
   {
     message: 'Settings Saved!',
 	timeout: 2000
@@ -285,5 +291,5 @@ const midiB = mm.sequenceProtoToMidi(drumSeq);
 
 grandSequencer.on('change', function(v) {
 	var pitch = v.row + 48
-        toneynth.triggerAttackRelease(Tone.Frequency(pitch, "midi").toFrequency(), '8n');
+        //toneynth.triggerAttackRelease(Tone.Frequency(pitch, "midi").toFrequency(), '8n');
 });
